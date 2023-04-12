@@ -1,3 +1,6 @@
+/* Altere o programa do exercício anterior para ficar recebendo o número
+dentro de um laço enquanto for diferente de 0 (zero). */
+
 import java.util.Scanner;
 
 public class BMExercicio06 {
