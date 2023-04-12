@@ -5,9 +5,9 @@ public class BMExercicio10 {
     
    int x = 10;
 
-    do {    
-      System.out.printf("%d ", x);
-      x++;
+    do {
+        System.out.println("Valor de X: " + x);
+        x++;
     } while (x < 30);
   }
 }
