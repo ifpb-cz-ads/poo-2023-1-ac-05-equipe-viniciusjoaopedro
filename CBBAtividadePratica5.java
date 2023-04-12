@@ -7,8 +7,11 @@ public class CBBAtividadePratica5 {
    
     System.out.println("Os números pares de 0 a 100: ");
 
-    for (i=0; i<=100; i+=2) {        
-        System.out.print(i + " ");             
+    for (i=0; i<=100; i++) {
+        // Caso seja par
+        if (i % 2 == 0){
+            System.out.print(i + " ");
+        }
     }
   }
 }
