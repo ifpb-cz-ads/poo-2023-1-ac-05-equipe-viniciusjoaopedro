@@ -22,13 +22,13 @@ Os quatro elementos básicos de repetição controlada por contador são:
 
 Tanto o while quanto o for são usados para repetir um bloco de código várias vezes em programação. A principal diferença entre eles é como eles controlam a repetição.
 A sintaxe geral da instrução while é a seguinte:
-```
+```java
 while (condição) {
     // bloco de código
 }
 ```
 Já a sintaxe geral da instrução for é:
-```
+```java
 for (inicialização; condição; atualização) {
     // bloco de código
 }
@@ -168,27 +168,17 @@ Dessa forma, ao encontrar o primeiro caso que satisfaça a condição, o switch 
 O erro está localizado no seguinte trecho: `i++`, já que o `i` do `for` começa com o valor 100 e a sua condição de parada é `i >= 1`, então esse loop nunca terá um fim já que o valor de `i` logo de início já é maior do que o valor pretendido, e após isso, seu valor só irá aumentar cada vez mais
 
 #### c) O código a seguir deve dar saída dos inteiros ímpares de 19 a 1:
-
 ```java
 for(i = 19; i >= 1; i += 2) System.out.println(i);
 ```
 
-O código apresentado em Java está correto. Ele utiliza a instrução for para iniciar a variável i com o valor 19, testar se i é maior ou igual a 1 e incrementar i em 2 a cada iteração do loop. Dentro do loop, a instrução System.out.println(i) é usada para imprimir o valor atual de i.
+O erro está localizado no seguinte trecho: `i += 2`, já que o `i` do `for` começa com o valor 19 e a sua condição de parada é `i >= 1`, então esse loop nunca terá um fim já que o valor de `i` logo de início já é maior do que o valor pretendido, e após isso, seu valor só irá aumentar cada vez mais.
 
-O resultado esperado do código é a impressão dos números ímpares de 19 a 1, em ordem decrescente. Portanto, o código deve imprimir na saída:
+Solução:
 ```java
-19
-17
-15
-13
-11
-9
-7
-5
-3
-1
+for(i = 19; i >= 1; i -= 2) System.out.println(i);
 ```
-Sendo assim, não há erros de sintaxe no código apresentado.
+
 
 #### d) O código seguinte deve dar saída dos inteiros pares de 2 a 100:
 
