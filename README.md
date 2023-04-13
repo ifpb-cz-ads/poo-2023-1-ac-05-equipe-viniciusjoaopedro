@@ -133,7 +133,7 @@ Nesse exemplo, quando i for ímpar, a instrução continue será executada, pula
 For (i = 100, i >= 1, i++)
     System.out.println(i); 
 ```
-O código apresenta alguns erros. Um deles é um erro de sintaxe pois o `For` está iniciando com maiúscula, o correto seria `for`. outro ponto é que a inicialização do loop está correta (i = 100), mas a condição e a iteração não estão. A condição deve ser i >= 1 para garantir que o loop continue executando enquanto i for maior ou igual a 1, e a iteração deve ser i-- para garantir que i seja decrementado a cada iteração do loop.
+O código apresenta alguns erros. Um deles é um erro de sintaxe pois o `For` está iniciando com maiúscula, o correto seria `for`. outro ponto é que a inicialização do loop está correta `(i = 100)`, mas a condição e a iteração não estão. A condição deve ser `i >= 1` para garantir que o loop continue executando enquanto `i` for maior ou igual a 1, e a iteração deve ser `i--` para garantir que `i` seja decrementado a cada iteração do loop.
 
 o código correto seria:
 ```java
@@ -145,14 +145,14 @@ for (int i = 100; i >= 1; i--) {
 ```java
 switch (value % 2) {
     case 0:
-    System.out.println("Inteiro par");
-        case 1:
-    System.out.println("Inteiro ímpar");
+        System.out.println("Inteiro par");
+    case 1:
+        System.out.println("Inteiro ímpar");
 }
 ```
-O código está correto em termos de sintaxe, mas possui um problema de lógica.No código apresentado, o switch testa se value % 2 é igual a 0 (ou seja, se value é par) e, em seguida, imprime "Inteiro par". No entanto, em seguida, ele continua a executar o código sem sair do switch e imprime também "Inteiro ímpar". Isso acontece porque o case 1 está sem o break para interromper a execução do switch.
+O código está correto em termos de sintaxe, mas possui um problema de lógica.No código apresentado, o switch testa se `value % 2` é igual a 0 (ou seja, se value é par) e, em seguida, imprime "Inteiro par". No entanto, em seguida, ele continua a executar o código sem sair do `switch` e imprime também "Inteiro ímpar". Isso acontece porque o `case 1` está sem o `break` para interromper a execução do switch.
 
-Para corrigir o problema, é necessário adicionar o comando break ao final de cada case, como no exemplo abaixo:
+Para corrigir o problema, é necessário adicionar o comando `break` ao final de cada case, como no exemplo abaixo:
 ```java
 switch (value % 2) {
     case 0:
@@ -189,7 +189,17 @@ for(i = 19; i >= 1; i -= 2) System.out.println(i);
         counter += 2;
     } while (counter < 100);
 ```
-O código apresentado em Java está correto. Ele utiliza a instrução do...while para imprimir na saída os números pares de 2 a 98. A variável counter é inicializada com o valor 2, e dentro do laço de repetição, a instrução System.out.println(counter) é usada para imprimir o valor atual de counter. Em seguida, counter é incrementado em 2 a cada iteração do loop. A condição do while testa se counter é menor que 100. Quando counter atinge o valor 100, o loop é interrompido e o programa continua a execução após o bloco do do...while. Portanto, não há erros de sintaxe no código apresentado em Java.
+O código apresenta alguns problemas. O primeiro é que variável `counter = 2;` não foi declarada, o correto seria `int count = 2;`. Corrigido isso o código exibirá os números de 2 até 98. Quando a variável `counter` receber incremento e for receber o valor 100 a condição do `while` não será satisfeita, interrompendo assim o ciclo. Para que pudesse dar saída dos inteiros pares de 2 a 100 o código poderia ser assim:
+
+```java
+    int counter = 2;
+    do {
+        System.out.println(counter);
+        counter += 2;
+    } while (counter <= 100);
+```
+
+começará imprimindo do número 2 até o 98, quando a variávelem Java está correto. Ele utiliza a instrução do...while para imprimir na saída os números pares de 2 a 98. A variável counter é inicializada com o valor 2, e dentro do laço de repetição, a instrução System.out.println(counter) é usada para imprimir o valor atual de counter. Em seguida, counter é incrementado em 2 a cada iteração do loop. A condição do while testa se counter é menor que 100. Quando counter atinge o valor 100, o loop é interrompido e o programa continua a execução após o bloco do do...while. Portanto, não há erros de sintaxe no código apresentado em Java.
 
 ---
 ### ✔️ Questão 6) O que o seguinte programa faz?
